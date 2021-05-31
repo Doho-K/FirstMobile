@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         rb.velocity = new Vector2(speed, rb.velocity.y);
         bool grounded = Physics2D.IsTouchingLayers(coll, ground);
