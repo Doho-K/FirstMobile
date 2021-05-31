@@ -26,12 +26,12 @@ public class ObjectPooler : MonoBehaviour
         {
             if (!gameObject.activeInHierarchy)//if gameObject is not active in hierarchy
             {
-                return gameObject;
+                return gameObject;//then return that ground to spawn
             }
 
         }
 
-        GameObject gameObj = Instantiate(pooledObject);
+        GameObject gameObj = Instantiate(pooledObject);//if every ground are active then make more ground
         gameObj.SetActive(false);
         gameObjects.Add(gameObj);
         return gameObj;
