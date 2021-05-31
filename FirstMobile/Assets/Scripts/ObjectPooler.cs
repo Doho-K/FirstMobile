@@ -19,16 +19,18 @@ public class ObjectPooler : MonoBehaviour
         }
     }
 
-    public GameObject GetPooledGameObject()
+    public GameObject GetPooledGameObject()//this function is used in groundgenerator
     {
-        foreach(GameObject gameObject in gameObjects)
+        
+        foreach(GameObject gameObject in gameObjects)//for every gameobjects in list gameobjects
         {
-            if (!gameObject.activeInHierarchy)
+            if (!gameObject.activeInHierarchy)//if gameObject is not active in hierarchy
             {
                 return gameObject;
             }
 
         }
+
         GameObject gameObj = Instantiate(pooledObject);
         gameObj.SetActive(false);
         gameObjects.Add(gameObj);

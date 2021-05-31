@@ -2880,6 +2880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 169873032132741085}
   - component: {fileID: 169873032132741082}
+  - component: {fileID: 6622678025773528074}
   m_Layer: 0
   m_Name: MediumGround
   m_TagString: Untagged
@@ -2964,8 +2965,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.750995, y: 1.9509983}
+  m_Size: {x: 11.750995, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &6622678025773528074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169873032132741084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcf5b70c358d944f89ea89ed40920f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &169873032216322925
 GameObject:
   m_ObjectHideFlags: 0

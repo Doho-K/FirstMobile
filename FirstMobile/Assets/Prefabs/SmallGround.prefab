@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7909602016374415646}
   - component: {fileID: 7909602016374415647}
+  - component: {fileID: 1218597881056967199}
   m_Layer: 0
   m_Name: SmallGround
   m_TagString: Untagged
@@ -164,8 +165,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.7378454, y: 1.9855292}
+  m_Size: {x: 7.7378454, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1218597881056967199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7909602016374415645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcf5b70c358d944f89ea89ed40920f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7909602016461804325
 GameObject:
   m_ObjectHideFlags: 0
