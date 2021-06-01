@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         distance = player.transform.position.x - lastPosition.x;
         transform.position = new Vector3(transform.position.x + distance, transform.position.y, transform.position.z);
