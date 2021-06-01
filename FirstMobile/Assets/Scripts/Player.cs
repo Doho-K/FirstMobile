@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float speedMultiplier;
 
     public LayerMask ground;
+    public LayerMask deathGround;
 
     public AudioSource deathSound;
     public AudioSource jumpSound;
@@ -30,7 +31,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x > mileStoneCount)
+        bool dead = Physics2D.IsTouchingLayers(coll, deathGround);
+
+        if (dead)
+        {
+            GameOver();
+        }
+        if (transform.position.x > mileStoneCount)
         {
             mileStoneCount += mileStone;
             speed = speed * speedMultiplier;
@@ -48,5 +55,10 @@ public class Player : MonoBehaviour
             }
         }
         anim.SetBool("Grounded", grounded);
+    }
+
+    void GameOver()
+    {
+
     }
 }
