@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
 
     public AudioSource deathSound;
     public AudioSource jumpSound;
+
+    public GameManager GameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,7 @@ public class Player : MonoBehaviour
             mileStoneCount += mileStone;
             speed = speed * speedMultiplier;
             mileStone += mileStone * speedMultiplier;
-            Debug.Log("SpeedUP");
+
         }
         rb.velocity = new Vector2(speed, rb.velocity.y);
         bool grounded = Physics2D.IsTouchingLayers(coll, ground);
@@ -59,6 +61,6 @@ public class Player : MonoBehaviour
 
     void GameOver()
     {
-
+        GameManager.GameOver();
     }
 }
