@@ -6,10 +6,6 @@ public class ScrollingBackground : MonoBehaviour
 {
     public Renderer background;
     public float backgroundSpeed;
-    void Start()
-    {
-        
-    }
 
     
     void Update()

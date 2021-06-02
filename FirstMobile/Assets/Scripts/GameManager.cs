@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-    public void Restart()
+    public void Res()
     {
         GroundDestroyer[] destroyer = FindObjectsOfType<GroundDestroyer>();
         for(int i =0; i < destroyer.Length; i++)
@@ -52,12 +52,21 @@ public class GameManager : MonoBehaviour
 
         
         gameOverScreen.SetActive(false);
+        Move();
         player.gameObject.SetActive(true);
-        player.transform.position = playerStartPoint;
-        groundGenerator.transform.position = groundGenerationStartPoint;
+        Debug.Log(player.transform.position.x + " after set active");
+        
         backgroundSound.Play();
         scoreManager.score = 0;
         scoreManager.isScoreIncreasing = true;
+    }
+
+    public void Move()
+    {
+        groundGenerator.transform.position = groundGenerationStartPoint;
+        player.transform.position = playerStartPoint;
+        Debug.Log(player.transform.position.x + "x" +player.transform.position.y + "y"+"after reset");
+        
     }
 
 }

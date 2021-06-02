@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public AudioSource jumpSound;
 
     public GameManager GameManager;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         mileStoneCount = mileStone;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         bool dead = Physics2D.IsTouchingLayers(coll, deathGround);
