@@ -8,15 +8,14 @@ public class GroundDestroyer : MonoBehaviour
     
     void Start()
     {
-        point = GameObject.Find("GroundEndPoint");
+        point = GameObject.Find("GroundEndPoint");//find point that this object will be deactivate
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < point.transform.position.x)
+        if (transform.position.x < point.transform.position.x)//if this object's x position is less than point position
         {
-            gameObject.SetActive(false);
+            gameObject.SetActive(false);//then deactivate it
         }
     }
 }

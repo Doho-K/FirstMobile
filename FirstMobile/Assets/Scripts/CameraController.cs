@@ -9,18 +9,16 @@ public class CameraController : MonoBehaviour
     private Vector3 lastPosition;
     private float distance;
 
-    // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<Player>();
-        lastPosition = player.transform.position;
+        player = FindObjectOfType<Player>();//find player to chase
+        lastPosition = player.transform.position;//set initial position of player
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        distance = player.transform.position.x - lastPosition.x;
-        transform.position = new Vector3(transform.position.x + distance, transform.position.y, transform.position.z);
-        lastPosition = player.transform.position;
+        distance = player.transform.position.x - lastPosition.x;//calculate distance of player moved
+        transform.position = new Vector3(transform.position.x + distance, transform.position.y, transform.position.z);//change camera position
+        lastPosition = player.transform.position;//set last position again
     }
 }

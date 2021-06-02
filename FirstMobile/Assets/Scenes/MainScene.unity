@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99d7dfc31a52ca4691a0edd6a9c0567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   jump: 22
   mileStone: 100
   speedMultiplier: 1.1
@@ -841,7 +841,6 @@ MonoBehaviour:
   deathGround:
     serializedVersion: 2
     m_Bits: 256
-  deathSound: {fileID: 683576660}
   jumpSound: {fileID: 1584397403}
   GameManager: {fileID: 252929197}
 --- !u!95 &477701290

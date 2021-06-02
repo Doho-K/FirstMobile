@@ -9,22 +9,22 @@ public class CoinPicker : MonoBehaviour
     private ScoreManager scoreManager;
     private void Start()
     {
-        coinPickSound = GameObject.Find("CoinPickSound").GetComponent<AudioSource>();
+        coinPickSound = GameObject.Find("CoinPickSound").GetComponent<AudioSource>();//automatically set audio source of coin pick sound
         scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.name == "Player")
+        if(other.gameObject.name == "Player")//when coin collided with player
         {
 
-            gameObject.SetActive(false);
-            if (coinPickSound.isPlaying)
+            gameObject.SetActive(false);//deactivate coin
+            if (coinPickSound.isPlaying)//play coin sound and stop
             {
                 coinPickSound.Stop();
             }
             coinPickSound.Play();
-            scoreManager.score += coinPoints;
+            scoreManager.score += coinPoints;//add coin point
         }
     }
 }

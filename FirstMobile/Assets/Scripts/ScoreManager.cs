@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI;//this is for UI
 
 public class ScoreManager : MonoBehaviour
 {
@@ -16,25 +16,24 @@ public class ScoreManager : MonoBehaviour
     public bool isScoreIncreasing;
     void Start()
     {
-        isScoreIncreasing = true;
-        if (PlayerPrefs.HasKey("HighScore"))
+        isScoreIncreasing = true;//when start, score starts increase
+        if (PlayerPrefs.HasKey("HighScore"))//if there is a data of highscore
         {
-            highscore = PlayerPrefs.GetFloat("HighScore");
+            highscore = PlayerPrefs.GetFloat("HighScore");//then set current highscore as saved highscore
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(isScoreIncreasing)
-            score += pointsPerSecond * Time.deltaTime;
+        if(isScoreIncreasing)//if score increasement is allowed
+            score += pointsPerSecond * Time.deltaTime;//increase score by time
 
-        if(score > highscore)
+        if(score > highscore)//if current score is higher than highscore
         {
-            highscore = score;
-            PlayerPrefs.SetFloat("HighScore", highscore);
+            highscore = score;//set highscore as current score
+            PlayerPrefs.SetFloat("HighScore", highscore);//and save it
         }
-        scoreText.text = Mathf.Round(score).ToString();
+        scoreText.text = Mathf.Round(score).ToString();//change it to string and integer to show on text
         highscoreText.text = Mathf.Round(highscore).ToString();
     }
 }
